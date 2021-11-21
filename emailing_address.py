@@ -16,9 +16,9 @@ class Mail:
             print("Error")
 
     def __str__(self):
-        return f"{Mail.name}+{Mail.znak}+{Mail.domen}"
+        return f"{self.name}{self.znak}{self.domen}"
 
 if __name__ == "__main__":
 
-    i = Mail("dfna111", "@", "gmail.com")
+    i = Mail("dfna1", "@", "gmail.com")
     print(i)
