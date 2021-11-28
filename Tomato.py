@@ -26,7 +26,7 @@ class Tomato:
     def _print_state(self):
         if self._state == 1:
             print(f'Помидор {self._index} еще {Tomato.states[self._state]}')
-        elif self._state == 2:
+        elif self._state > 1:
             print(f'Помидор {self._index} уже {Tomato.states[self._state]}')
 
 
