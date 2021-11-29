@@ -1,9 +1,6 @@
-def credit_card(c):
-    card = [c]
-    card_secr = ["************"]
-    print(*(card_secr + [card[0][12:]]))
+def credit_card(card):
+    print("*" * 12 + str(card[12:]))
 
 
-credit_card(input("Введите номер карты: "))
-
-
+if __name__ == "__main__":
+    credit_card(input("Введите номер карты: "))
