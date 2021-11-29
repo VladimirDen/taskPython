@@ -11,23 +11,17 @@ class Tomato:
         self._state = 0
 
     def grow(self):
-        self._maturation_state()
+        if self._state < 3:
+            self._state += 1
+        if self._state == 1:
+            print(f'Помидор {self._index} еще {Tomato.states[self._state]}')
+        elif self._state > 1:
+            print(f'Помидор {self._index} уже {Tomato.states[self._state]}')
 
     def is_ripe(self):
         if self._state == 3:
             return True
         return False
-
-    def _maturation_state(self):
-        if self._state < 3:
-            self._state += 1
-        self._print_state()
-
-    def _print_state(self):
-        if self._state == 1:
-            print(f'Помидор {self._index} еще {Tomato.states[self._state]}')
-        elif self._state > 1:
-            print(f'Помидор {self._index} уже {Tomato.states[self._state]}')
 
 
 class TomatoBush:
