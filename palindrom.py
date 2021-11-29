@@ -6,4 +6,5 @@ def palindrom(word):
         print("Слово не является палиндромом.")
 
 
-palindrom(input("Ведите слово: "))
+if __name__ == "__main__":
+    palindrom(input("Ведите слово: ").casefold())
