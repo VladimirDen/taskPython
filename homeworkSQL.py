@@ -36,3 +36,15 @@ if __name__ == '__main__':
             else:
                 courser.execute('''INSERT INTO textTabl(texts) VALUES ('нечетное');''')
                 db.commit()
+
+    courser.execute('''SELECT Count(*) FROM numTabl''')
+    id = courser.fetchall()
+
+    if int(id[0][0]) > 5:
+        courser.execute('''DELETE FROM textTabl WHERE id=1;''')
+        db.commit()
+    else:
+        courser.execute('''UPDATE textTabl SET texts = 'hello' WHERE id = 1''')
+        db.commit()
+        
+    courser.close()
